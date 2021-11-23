@@ -1,9 +1,142 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <style scr="/style.css"></style>  
+  </head>  
 <body>
+<div id="searchBar"></div>
+        <div id="search">
+              <form id="myForm">
+  <input type="text" name="search" id="myInput" onkeyup="mFunction()" placeholder="Search...">
+ </form>
+
+ <div id="loginForm">
+   <form>
+     <input type="text" name="login" id="myLogin"  onkeyup="lFunction()" placeholder="Email...">
+     <input type="password" name="login" id="myPass"  onkeyup="pFunction()" placeholder="Password...">
+   </form>  
+        <button id="myLoginButton" onclick="login()">Next</button>
+ </div>  
 
 
-  <h1>Welcome to Turn</h1>
+<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a onClick="javascript:window.open('mailto:mattgt933@gmail.com?subject=Add%20your%20website&body=Fill%20in%20the%20blanks.%20%20%20%20%20%20Name:%20%20%20%20%20Email:%20%20%20%20%20Website%20URL:%20', 'mail');event.preventDefault()" href="mailto:mattgt933@gmail.com">Add your site</a>
+  <a onClick="javascript:window.open('mailto:mattgt933@gmail.com?subject=Change%20your%20website%20url&body=Fill%20in%20the%20blanks.%20%20%20%20%20%20Email:%20%20%20%20%20Password:%20%20%20%20%20Old%20website%20url:%20%20%20%20%20New%20website%20URL:%20', 'mail');event.preventDefault()" href="mailto:mattgt933@gmail.com">Change your site url</a>
+  <a onClick="javascript:window.open('mailto:mattgt933@gmail.com?subject=Get%20more%20keywords&body=Fill%20in%20the%20blanks.%20%20%20%20%20%20Name:%20%20%20%20%20Email:%20%20%20%20%20Website%20URL:%20%20%20%20%20FL%20Exchange%20account%20number:%20%20%20%20%20Amount%20of%20keywords:%20%20%20%20%20Promo%20code%20(if%20you%20dont%20have%20one%20use%200)', 'mail');event.preventDefault()" href="mailto:mail@domain.com">Get more keywords</a>
+  <a onClick="javascript:window.open('mailto:mattgt933@gmail.com?subject=Promote%20Your%20Site&body=Fill%20in%20the%20blanks.%20%20%20%20%20%20Name:%20%20%20%20%20Email:%20%20%20%20%20Website%20URL:%20%20%20%20%20FL%20Exchange%20account%20number:%20%20%20%20%20Promo%20code%20(if%20you%20dont%20have%20one%20use%200)', 'mail');event.preventDefault()" href="mailto:mail@domain.com">Promote your site</a>
+  <a onClick="javascript:window.open('mailto:mattgt933@gmail.com?subject=Post%20an%20ad&body=Fill%20in%20the%20blanks.%205SW/Week%20%20%20%20%20%20Name:%20%20%20%20%20Email:%20%20%20%20%20Website%20URL:%20%20%20%20%20FL%20Exchange%20account%20number:%20%20%20%20%20Ad%20placement%20(Top%20left,%20top%20right,%20left%20right,%20etc.)%20%20%20%20%20Promo%20code%20(if%20you%20dont%20have%20one%20use%200)', 'mail');event.preventDefault()" href="mailto:mail@domain.com">Post an Ad</a>
+  <a onClick="javascript:window.open('mailto:mattgt933@gmail.com?subject=Make%20an%20account&body=Fill%20in%20the%20blanks.%20%20%20%20Pro%20Account%20Is%203SW/Month.%20%20%20%20%20%20Name:%20%20%20%20%20Email:%20%20%20%20%20Password:%20%20%20%20%20FL%20Exchange%20Account%20Number:%20', 'mail');event.preventDefault()" href="mailto:mattgt933@gmail.com" id="CRALink">Create your account</a><div id="notificationCRA"></div>
+
+</div>
+
+<button class="openbtn" onclick="openNav()">☰</button><div id="notification"></div> 
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "260px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+  $('#carboncoad').hide();
+
+}
+</script>  
+
+ <nav>
+ <table id="myTable" style="display: none;">
+ <tbody><tr class="header">
+<th  style="text-align: center; position: relative; top: 100px;">Search Results</th>
+</tr>
+
+
+ <tr>  
+ <td>
+ <div class="searchResults" onclick="https://mavikarchitecturestudio.wordpress.com/" id="mavikdiva">
+  <a target="_blank"  href="https://mavikarchitecturestudio.wordpress.com/" onclick="captureOutboundLink('https://mavikarchitecturestudio.wordpress.com/'); return false;"><p>Mavik</p>
+   <iframe src="https://mavikarchitecturestudio.wordpress.com/" width="100%" height="400px"></iframe>
+    <p style="display: none;" class="keywords">Keywords: mavik studio Architecture Studio architecture Joe joe</p>
+   </a>
+  </div>
+ </td>
+</tr>
+
+
+ </tbody></table>
+ </nav>
+ </div>
+  
+
+    <script type="text/javascript">//<![CDATA[
+
+$(document).ready(function(){
+$('table').hide();
+
+
+   $("#myInput").keyup(function(){
+         var searchVal = $('#myInput').val();
+    if(searchVal == ""){
+        $('table').hide();
+        $('#myInput').animate({top: "200px", width: "50%", left: "25%"}, 625);
+    }
+    else if(searchVal == " "){
+     $('table').hide(); 
+     $('#myInput').animate({top: "200px", width: "50%", left: "25%"}, 625);
+    }
+    else{
+        $('table').show();
+        $('table tr td').show();
+        $('table tr td:not(:contains("' + searchVal + '"))').hide();
+        $('#myInput').animate({top: "17px", width: "60%", left: "10px"}, 625);
+    }
+});
+
+
+
+$('#myLoginButton').click(function(){
+    var loginVal = $('#myLogin').val();
+    var passVal = $('#myPass').val();
+    if(loginVal == "mattgt933@gmail.com")
+      $('#myPass').show(250);
+      $("#myLoginButton").text("Login");
+      if(passVal == "myPassword"){
+        $("#myLoginButton").click(function(){
+        $("#myLoginButton").text("Logout");
+        $('.keywords').show();
+        $('#ads').hide();
+  });
+    }
+    /*
+    else if(loginVal == "email"){
+      $('#myPass').show(250);
+      $("#myLoginButton").text("Login");
+      if(passVal == "password")
+        $("#myLoginButton").click(function(){
+        $("#myLoginButton").text("Logout");
+        $('.keywords').show();
+        $('#ads').hide();
+        
+  });
+    }
+    */
+  
+
+
+    else{
+      
+       $("#myLoginButton").click(function(){
+         $('#myPass').hide();
+        $("#myLoginButton").text("Login");
+        $('#ads').show();
+        $('.keywords').hide();
+  });
+    }
+});
+
+
+});
+
+  //]]></script>
  
 </body>
 </html>
