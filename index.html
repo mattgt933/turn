@@ -6,7 +6,179 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100;200;300;400&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="/styles.css">
+  <style>
+          * {
+            font-weight: 200;
+            font-family: 'Lexend Tera', sans-serif;
+          }
+
+            *::selection {
+                color: #fff;
+                background: #929872;
+                font-weight: lighter;
+            }
+
+            a {
+              color: #e6b800;
+            }
+
+     body {
+    background-color: #BFC7CE;
+    font-family: raleway, sans serif;
+    overflow-x: hidden;
+     }
+
+    input {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+    }
+
+    #myInput {
+    text-align: left;
+    width: 50%;
+    color: #fff;
+    background-color: #929872;
+    border: 4px solid #929872;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    position: fixed;
+    top: 200px;
+    left: 25%;
+    z-index: 3;
+    }
+    
+    #searchBar {
+    width: 100%;
+    height: 82px;
+    background-color: #778793;
+    border: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    }
+
+
+    #myLogin {
+    text-align: left;
+    width: 15%;
+    background-color: #929872;
+    border: 4px solid #929872;
+    color: #fff;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+     position: fixed;
+    top: 20px;
+    right: 150px;
+    z-index: 4;
+    }
+
+    #myPass {
+    text-align: left;
+    width: 15%;
+    background-color: #929872;
+    border: 4px solid #929872;
+    color: #fff;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+     position: fixed;
+    top: 20px;
+    right: 150px;
+    z-index: 5;
+    display: none;
+    }
+
+
+    #myLoginButton {
+    font-size: 15;
+    text-align: center;
+    width: 80px;
+    color: #fff;
+    background-color: #929872;
+    border: 4px solid #929872;
+    border-radius: 5px;
+    padding-top: 4px;
+    padding-right: 5px;
+    padding-bottom: 4px;
+    padding-left: 5px;
+     position: fixed;
+    top: 20px;
+    right: 65px;
+    z-index: 4;
+    }
+
+    a {
+     color: black; 
+     text-decoration: none;
+     }
+     
+     iframe {
+     border: none;
+     }
+
+
+.sidepanel  {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #929872;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+      z-index: 5;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #778793;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 4;
+}
+
+.openbtn:hover {
+  color: #929872;
+}
+</style>
+
   </head>  
 <body>
 <div id="searchBar"></div>
