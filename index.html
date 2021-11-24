@@ -69,7 +69,7 @@
     }
     
     #mySubmit {
-    text-align: left;
+    text-align: center;
     width: 10%;
     background-color: #929872;
     border: 4px solid #929872;
@@ -83,6 +83,7 @@
     top: 350px;
     left: 25%;
     z-index: 4;
+    min-width: 100px;
     }
     
     #searchBar {
@@ -157,7 +158,7 @@
     width: 80px;
     color: #fff;
     position: fixed;
-    top: 15px;
+    top: 25px;
     left: 15px;
     z-index: 4; 
     }
@@ -222,6 +223,32 @@
 .openbtn:hover {
   color: #929872;
 }
+
+
+
+@media (max-aspect-ratio: 9/16) {
+  #searchBar {
+  height: 110px;
+  }
+  
+  #myLogin {
+  top: 62px;
+  left: 15px;
+  width: 130px;
+  }
+  
+  #myPass {
+  top: 62px;
+  left: 15px;
+  width: 130px;
+  }
+  
+  #myLoginButton {
+  top: 63px;
+  left: 180px;
+  }
+ 
+}
 </style>
 
   </head>  
@@ -258,7 +285,7 @@
 <button class="openbtn" onclick="openNav()">☰</button><div id="notification"></div> 
 <script>
 function openNav() {
-  document.getElementById("mySidepanel").style.width = "260px";
+  document.getElementById("mySidepanel").style.width = "290px";
   document.getElementById("mySidepanel").style.boxShadow = "0px 0px 5px grey";
 }
 
@@ -366,3 +393,6 @@ $('#myLoginButton').click(function(){
  
 </body>
 </html>
+
+
+
